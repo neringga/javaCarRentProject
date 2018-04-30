@@ -1,41 +1,45 @@
+package mif.CarRent.firm;
 
-public class Client extends RentObject {
+public class Client {
 	
 	private String name;
 	private String surname;
-	private int drivingLicenseNumber;
+	private long drivingLicenseNumber;
+	
+	public Client (long drivingLicenseNumber, String name, String surname) {
+		this.drivingLicenseNumber = drivingLicenseNumber;
+		this.name = name;
+		this.surname = surname;
+	}
 	
 	public Client () {
-		super();
 	}
 	
-	public int getClientCode () {
-		return generatedObjectCode;
-	}
 	
-	public void setName (String givenName) {
-		this.name = givenName;
+	public void setName (String name) {
+		this.name = name;
 	}
 	
 	public String getName () {
-		return name;
+		return this.name;
 	}
 	
-	public void setSurname (String givenSurname) {
-		this.surname = givenSurname;
+	public void setSurname (String surname) {
+		this.surname = surname;
 	}
 	
 	public String getSurname () {
-		return surname;
+		return this.surname;
 	}
 	
-	public void setDrivingLicenseNumber (int givenLicenseNumber) {
-		this.drivingLicenseNumber = givenLicenseNumber;
+	public void setDrivingLicenseNumber (long drivingLicenseNumber) {
+		this.drivingLicenseNumber = drivingLicenseNumber;
 	}
 	
-	public int getDrivingLicenseNumber () {
-		return drivingLicenseNumber;
+	public long getDrivingLicenseNumber () {
+		return this.drivingLicenseNumber;
 	}
 	
 
 }
+

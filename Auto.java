@@ -1,53 +1,56 @@
+package mif.CarRent.firm;
 
-public class Auto extends RentObject {
+import java.awt.Color;
+
+public class Auto extends Enumerators{
 	
 	private String licensePlate;
-	private String carColor;
-	private String carBrand;
+	private static Color color = Color.black;
+	private Brand brand;
 	private int pricePerMin; 
 	public boolean isCurrentlyAvailableToRent = true;
 	
-	public Auto (int pricePerMin) {
-		super();
+	public Auto (int pricePerMin, String licensePlate, Brand brand) {
+		this.pricePerMin = pricePerMin;
+		this.licensePlate = licensePlate;
+		this.brand = brand;
+	}
+	
+	public Auto () {
+	} 
+	
+	public void setPricePerMin (int pricePerMin) {
 		this.pricePerMin = pricePerMin;
 	}
 	
-	public int getCarCode () {
-		return generatedObjectCode;
+	public void setBrand (Brand brand) {
+		this.brand = brand;
 	}
+	
 	
 	public void setLicensePlate (String licensePlate) {
 		this.licensePlate = licensePlate;
 	}
 	
 	public String getLicensePlate () {
-		return licensePlate;
+		return this.licensePlate;
 	}
 	
-	public void setCarColor (String x) {
-		carColor = x;
+	public Color getCarColor () {
+		return this.color;
 	}
 	
-	public String getCarColor () {
-		return carColor;
+	public Brand getCarBrand () {
+		return this.brand;
 	}
 	
-	public void setCarBrand (String x) {
-		this.carBrand = x;
+	public int getPricePerMin () {
+		return this.pricePerMin;
 	}
 	
-	public String getCarBrand () {
-		return carBrand;
+	public boolean isThisCarCurrentlyAvailableToRent () {
+		return this.isCurrentlyAvailableToRent;
 	}
-	
-	public void calculateCarPricePerMin () {
-		
-	}
-	
-	
-	public int getCarPricePerMin () {
-		return pricePerMin;
-	}
-	
+
 
 }
